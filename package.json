@@ -1,0 +1,14 @@
+{
+  "name": "@docknetwork/node-types",
+  "version": "1.0.0",
+  "description": "Types for Dock's Substrate node",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/docknetwork/node-types"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "license": "MIT"
+}
