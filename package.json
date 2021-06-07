@@ -10,5 +10,6 @@
   "engines": {
     "node": ">=14.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "files": "src"
 }
