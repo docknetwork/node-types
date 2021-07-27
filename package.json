@@ -1,6 +1,6 @@
 {
   "name": "@docknetwork/node-types",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "Types for Dock's Substrate node",
   "main": "index.js",
   "repository": {
