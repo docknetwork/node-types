@@ -1,10 +1,10 @@
-const v22Types = require('./v22');
-const v23Types = require('./v23');
-const v27Types = require('./v27');
-const rpc = require('./rpc');
+import v22Types from './v22';
+import v23Types from './v23';
+import v27Types from './v27';
+import rpc from './rpc';
 
 // Types used by all (coincidentally) PoA chains
-const PoAChainTypes = [
+export const PoAChainTypes = [
   {
     minmax: [0, 23],
     types: v22Types,
@@ -15,8 +15,7 @@ const PoAChainTypes = [
   },
 ];
 
-const bundle = {
-  spec: {
+export const spec = {
     'dock-main-runtime': {
       types: PoAChainTypes,
       rpc
@@ -57,7 +56,10 @@ const bundle = {
       ],
       rpc
     }
-  },
 };
 
-module.exports = bundle;
+const bundle = {
+  spec,
+};
+
+export default bundle;

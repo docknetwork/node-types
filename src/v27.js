@@ -146,4 +146,4 @@ const types = {
   },
 };
 
-module.exports = types;
+export default types;

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   poa: {
     treasuryAccount: {
       description: 'Return account address of treasury. The account address can then be used to query the chain for balance',

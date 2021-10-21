@@ -13,8 +13,8 @@ jobs:
         with:
           node-version: '14.x'
           registry-url: https://registry.npmjs.org/
-      - run: cp -rf package.json src
-      - run: cp -rf README.md src
-      - run: cd src && npm publish --access public
+      - run: npm install
+      - run: npm run build
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
