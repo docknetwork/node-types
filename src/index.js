@@ -1,6 +1,7 @@
 import v22Types from './v22';
 import v23Types from './v23';
 import v27Types from './v27';
+import v33Types from './v33';
 import rpc from './rpc';
 
 // Types used by all (coincidentally) PoA chains
@@ -32,27 +33,39 @@ export const spec = {
     'dock-pos-main-runtime': {
       types: [
         {
-          minmax: [27],
+          minmax: [0, 32],
           types: v27Types,
-        }
+        },
+        {
+          minmax: [33,],
+          types: v33Types,
+        },
       ],
       rpc
     },
     'dock-pos-test-runtime': {
       types: [
         {
-          minmax: [27],
+          minmax: [0, 32],
           types: v27Types,
-        }
+        },
+        {
+          minmax: [33,],
+          types: v33Types,
+        },
       ],
       rpc
     },
     'dock-pos-dev-runtime': {
       types: [
         {
-          minmax: [27],
+          minmax: [0, 32],
           types: v27Types,
-        }
+        },
+        {
+          minmax: [33,],
+          types: v33Types,
+        },
       ],
       rpc
     }
