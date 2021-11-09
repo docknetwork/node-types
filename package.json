@@ -1,6 +1,6 @@
 {
   "name": "@docknetwork/node-types",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "Types for Dock's Substrate node",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
