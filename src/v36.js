@@ -22,31 +22,15 @@ const types = {
   Bytes65: {
     value: "[u8;65]"
   },
-  WrappedBytes: {
-    0: "Vec<u8>"
-  },
-  IncId: {
-    0: "u32"
-  },
+  WrappedBytes: "Vec<u8>",
+  IncId: "u32",
   RawDid: "[u8;32]",
-  Did: {
-    0: "RawDid"
-  },
-  Attester: {
-    0: "Did"
-  },
-  BlobOwner: {
-    0: "Did"
-  },
-  Controller: {
-    0: "Did"
-  },
-  BBSPlusParamsOwner: {
-    0: "Did"
-  },
-  AccumulatorOwner: {
-    0: "Did"
-  },
+  Did: "RawDid",
+  Attester: "Did",
+  BlobOwner: "Did",
+  Controller: "Did",
+  BBSPlusParamsOwner: "Did",
+  AccumulatorOwner: "Did",
   PublicKey: {
     _enum: {
       Sr25519: "Bytes32",
@@ -281,9 +265,7 @@ const types = {
     did: "Controller",
     nonce: "BlockNumber"
   },
-  AccumulatorId: {
-    0: "[u8;32]"
-  },
+  AccumulatorId: "[u8;32]",
   AccumParametersStorageKey: "(AccumulatorOwner, IncId)",
   AccumPublicKeyStorageKey: "(AccumulatorOwner, IncId)",
   AccumulatorParameters: {
