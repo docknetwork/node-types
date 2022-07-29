@@ -336,6 +336,12 @@ const types = {
     witness_update_info: "Option<Vec<u8>>",
     nonce: "BlockNumber"
   },
+  StorageVersion: {
+    _enum: {
+      SingleKey: null,
+      MultiKey: null
+    }
+  },
   StateChange: {
     _enum: {
       AddKeys: "AddKeys",
