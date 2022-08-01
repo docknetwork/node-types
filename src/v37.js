@@ -22,31 +22,15 @@ const types = {
   Bytes65: {
     value: "[u8;65]"
   },
-  WrappedBytes: {
-    0: "Vec<u8>"
-  },
-  IncId: {
-    0: "u32"
-  },
+  WrappedBytes: "Vec<u8>",
+  IncId: "u32",
   RawDid: "[u8;32]",
-  Did: {
-    0: "RawDid"
-  },
-  Attester: {
-    0: "Did"
-  },
-  BlobOwner: {
-    0: "Did"
-  },
-  Controller: {
-    0: "Did"
-  },
-  BBSPlusParamsOwner: {
-    0: "Did"
-  },
-  AccumulatorOwner: {
-    0: "Did"
-  },
+  Did: "RawDid",
+  Attester: "Did",
+  BlobOwner: "Did",
+  Controller: "Did",
+  BBSPlusParamsOwner: "Did",
+  AccumulatorOwner: "Did",
   PublicKey: {
     _enum: {
       Sr25519: "Bytes32",
@@ -150,11 +134,12 @@ const types = {
     endpoint: "ServiceEndpoint"
   },
   AggregatedDidDetailsResponse: {
-    id: "Did",
+    did: "Did",
     details: "StoredDidDetails",
     keys: "Option<Vec<DidKeyWithId>>",
     controllers: "Option<Vec<Controller>>",
-    serviceEndpoints: "Option<Vec<ServiceEndpointWithId>>"
+    serviceEndpoints: "Option<Vec<ServiceEndpointWithId>>",
+    attestation: "Option<Attestation>"
   },
   RegistryId: "[u8;32]",
   RevokeId: "[u8;32]",
@@ -252,23 +237,23 @@ const types = {
   },
   BBSPlusParametersStorageKey: "(BBSPlusParamsOwner, IncId)",
   BBSPlusPublicKeyStorageKey: "(Controller, IncId)",
-  BbsPlusParameters: {
+  BBSPlusParameters: {
     label: "Option<Vec<u8>>",
     curve_type: "CurveType",
     bytes: "Vec<u8>"
   },
-  BbsPlusPublicKey: {
+  BBSPlusPublicKey: {
     curve_type: "CurveType",
     bytes: "Vec<u8>",
     params_ref: "Option<BBSPlusParametersStorageKey>"
   },
-  BbsPlusPublicKeyWithParams: "(BbsPlusPublicKey, Option<BbsPlusParameters>)",
+  BBSPlusPublicKeyWithParams: "(BBSPlusPublicKey, Option<BbsPlusParameters>)",
   AddBBSPlusParams: {
-    params: "BbsPlusParameters",
+    params: "BBSPlusParameters",
     nonce: "BlockNumber"
   },
   AddBBSPlusPublicKey: {
-    key: "BbsPlusPublicKey",
+    key: "BBSPlusPublicKey",
     did: "Controller",
     nonce: "BlockNumber"
   },
@@ -281,9 +266,7 @@ const types = {
     did: "Controller",
     nonce: "BlockNumber"
   },
-  AccumulatorId: {
-    0: "[u8;32]"
-  },
+  AccumulatorId: "[u8;32]",
   AccumParametersStorageKey: "(AccumulatorOwner, IncId)",
   AccumPublicKeyStorageKey: "(AccumulatorOwner, IncId)",
   AccumulatorParameters: {
@@ -352,6 +335,12 @@ const types = {
     removals: "Option<Vec<Vec<u8>>>",
     witness_update_info: "Option<Vec<u8>>",
     nonce: "BlockNumber"
+  },
+  StorageVersion: {
+    _enum: {
+      SingleKey: null,
+      MultiKey: null
+    }
   },
   StateChange: {
     _enum: {
