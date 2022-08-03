@@ -11,8 +11,8 @@ When using polkadot-js, the object exported from bundle.js should be passed to `
 
 Add to your project as `yarn add @docknetwork/node-types` or `npm install @docknetwork/node-types`.
 
-When using [sidecar](https://github.com/paritytech/substrate-api-sidecar), you can run the following command to connect to mainnet
+When using [sidecar](https://github.com/paritytech/substrate-api-sidecar), build the package first with `yarn build`. This will create a `dist` folder in the same directory. Then run the following command to connect to mainnet
 
 ```
-SAS_SUBSTRATE_TYPES_BUNDLE=<path to index.js> SAS_SUBSTRATE_WS_URL=wss://mainnet-node.dock.io/ yarn dev
+SAS_SUBSTRATE_TYPES_BUNDLE=<path to dist/index.cjs.js> SAS_SUBSTRATE_WS_URL=wss://mainnet-node.dock.io/ yarn dev
 ```
