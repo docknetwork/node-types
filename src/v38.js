@@ -39,6 +39,7 @@ const types = {
       X25519: "Bytes32",
     },
   },
+  DispatchError: "DispatchErrorPre6",
   SigValue: {
     _enum: {
       Sr25519: "Bytes64",
@@ -62,14 +63,11 @@ const types = {
     accountId: "AccountId",
     docRef: "OffChainDidDocRef",
   },
-  OnChainDidDetails: {
+  StoredOnChainDidDetails: {
+    nonce: "BlockNumber",
     lastKeyId: "IncId",
     activeControllerKeys: "u32",
     activeControllers: "u32",
-  },
-  StoredOnChainDidDetails: {
-    nonce: "BlockNumber",
-    data: "OnChainDidDetails",
   },
   StoredDidDetails: {
     _enum: {
@@ -147,7 +145,7 @@ const types = {
   },
   AddRegistry: {
     id: "RegistryId",
-    registry: "Registry",
+    newRegistry: "Registry",
   },
   RevokeRaw: {
     registryId: "RegistryId",
