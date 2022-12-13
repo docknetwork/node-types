@@ -6,6 +6,7 @@ import v36Types from './v36';
 import v37Types from './v37';
 import v38Types from './v38';
 import v39Types from './v39';
+import v44Types from './v44';
 import rpc from './rpc';
 
 // Types used by all (coincidentally) PoA chains
@@ -60,6 +61,10 @@ export const spec = {
           minmax: [39,],
           types: v39Types,
         },
+        {
+          minmax: [44,],
+          types: v44Types,
+        },
       ],
       rpc
     },
@@ -89,6 +94,10 @@ export const spec = {
           minmax: [39,],
           types: v39Types,
         },
+        {
+          minmax: [44,],
+          types: v44Types,
+        },
       ],
       rpc
     },
@@ -117,6 +126,10 @@ export const spec = {
         {
           minmax: [39,],
           types: v39Types,
+        },
+        {
+          minmax: [44,],
+          types: v44Types,
         },
       ],
       rpc

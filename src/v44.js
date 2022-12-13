@@ -39,7 +39,6 @@ const types = {
       X25519: "Bytes32",
     },
   },
-  DispatchError: "DispatchErrorPre6",
   SigValue: {
     _enum: {
       Sr25519: "Bytes64",
@@ -63,11 +62,14 @@ const types = {
     accountId: "AccountId",
     docRef: "OffChainDidDocRef",
   },
-  StoredOnChainDidDetails: {
-    nonce: "BlockNumber",
+  OnChainDidDetails: {
     lastKeyId: "IncId",
     activeControllerKeys: "u32",
     activeControllers: "u32",
+  },
+  StoredOnChainDidDetails: {
+    nonce: "BlockNumber",
+    data: "OnChainDidDetails",
   },
   StoredDidDetails: {
     _enum: {
