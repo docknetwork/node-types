@@ -20,7 +20,8 @@
   "scripts": {
     "build": "rollup -c && cp ./src/index.d.ts ./dist/index.d.ts",
     "dev": "rollup -c -w",
-    "pretest": "npm run build"
+    "pretest": "npm run build",
+    "publsih-npm": "yarn build && yarn publish"
   },
   "files": [
     "dist"
