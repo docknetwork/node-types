@@ -6,7 +6,6 @@ import v36Types from './v36';
 import v37Types from './v37';
 import v38Types from './v38';
 import v39Types from './v39';
-import v44Types from './v44';
 import rpc from './rpc';
 
 // Types used by all (coincidentally) PoA chains
@@ -42,28 +41,24 @@ export const spec = {
           types: v27Types,
         },
         {
-          minmax: [33,],
+          minmax: [33, 35],
           types: v33Types,
         },
         {
-          minmax: [36,],
+          minmax: [36, 36],
           types: v36Types,
         },
         {
-          minmax: [37,],
+          minmax: [37, 37],
           types: v37Types,
         },
         {
-          minmax: [38,],
+          minmax: [38, 38],
           types: v38Types,
         },
         {
-          minmax: [39,],
+          minmax: [39, 43],
           types: v39Types,
-        },
-        {
-          minmax: [44,],
-          types: v44Types,
         },
       ],
       rpc
@@ -75,28 +70,24 @@ export const spec = {
           types: v27Types,
         },
         {
-          minmax: [33,],
+          minmax: [33, 35],
           types: v33Types,
         },
         {
-          minmax: [36,],
+          minmax: [36, 36],
           types: v36Types,
         },
         {
-          minmax: [37,],
+          minmax: [37, 37],
           types: v37Types,
         },
         {
-          minmax: [38,],
+          minmax: [38, 38],
           types: v38Types,
         },
         {
-          minmax: [39,],
+          minmax: [39, 43],
           types: v39Types,
-        },
-        {
-          minmax: [44,],
-          types: v44Types,
         },
       ],
       rpc
@@ -108,28 +99,24 @@ export const spec = {
           types: v27Types,
         },
         {
-          minmax: [33,],
+          minmax: [33, 35],
           types: v33Types,
         },
         {
-          minmax: [36,],
+          minmax: [36, 36],
           types: v36Types,
         },
         {
-          minmax: [37,],
+          minmax: [37, 37],
           types: v37Types,
         },
         {
-          minmax: [38,],
+          minmax: [38, 38],
           types: v38Types,
         },
         {
-          minmax: [39,],
+          minmax: [39, 43],
           types: v39Types,
-        },
-        {
-          minmax: [44,],
-          types: v44Types,
         },
       ],
       rpc

@@ -75,6 +75,19 @@ const types = {
       OnChain: "StoredOnChainDidDetails",
     },
   },
+  HighRateRewardsState: {
+    _enum: {
+      None: null,
+      StartingInNextEra: "HighRateRewardsStartingInNextEra",
+      Active: "HighRateRewardsActive"
+    },
+  },
+  HighRateRewardsStartingInNextEra: {
+    duration: "u16"
+  },
+  HighRateRewardsActive: {
+    endsAfter: "u16"
+  },
   VerRelType: "u16",
   ServiceEndpointType: "u16",
   ServiceEndpoint: {
