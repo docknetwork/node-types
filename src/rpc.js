@@ -40,12 +40,72 @@ export default {
     },
   },
   core_mods: {
+    psPublicKeyWithParams: {
+      description: "Return PS public key with params",
+      params: [
+        {
+          name: "id",
+          type: "SignaturePublicKeyStorageKey",
+        },
+      ],
+      type: "Option<PSPublicKeyWithParams>",
+    },
+    psParamsByDid: {
+      description: "Return all PS params by a DID",
+      params: [
+        {
+          name: "did",
+          type: "Did",
+        },
+      ],
+      type: "BTreeMap<IncId, PSParams>",
+    },
+    psPublicKeysByDid: {
+      description: "Return all PS key with params by a DID",
+      params: [
+        {
+          name: "did",
+          type: "Did",
+        },
+      ],
+      type: "BTreeMap<IncId, PSPublicKeyWithParams>",
+    },
+    bbsPublicKeyWithParams: {
+      description: "Return BBS public key with params",
+      params: [
+        {
+          name: "id",
+          type: "SignaturePublicKeyStorageKey",
+        },
+      ],
+      type: "Option<BBSPublicKeyWithParams>",
+    },
+    bbsParamsByDid: {
+      description: "Return all BBS params by a DID",
+      params: [
+        {
+          name: "did",
+          type: "Did",
+        },
+      ],
+      type: "BTreeMap<IncId, BBSParams>",
+    },
+    bbsPublicKeysByDid: {
+      description: "Return all BBS key with params by a DID",
+      params: [
+        {
+          name: "did",
+          type: "Did",
+        },
+      ],
+      type: "BTreeMap<IncId, BBSPublicKeyWithParams>",
+    },
     bbsPlusPublicKeyWithParams: {
       description: "Return BBS+ public key with params",
       params: [
         {
           name: "id",
-          type: "BBSPlusPublicKeyStorageKey",
+          type: "SignaturePublicKeyStorageKey",
         },
       ],
       type: "Option<BBSPlusPublicKeyWithParams>",
@@ -58,7 +118,7 @@ export default {
           type: "Did",
         },
       ],
-      type: "BTreeMap<IncId, BBSPlusParameters>",
+      type: "BTreeMap<IncId, BBSPlusParams>",
     },
     bbsPlusPublicKeysByDid: {
       description: "Return all BBS+ key with params by a DID",
