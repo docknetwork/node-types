@@ -10,6 +10,7 @@ const types = {
   BlockLength: {
     max: "PerDispatchClassU32"
   },
+  DispatchError: "DispatchErrorPre6",
   Bytes32: {
     value: "[u8;32]"
   },
