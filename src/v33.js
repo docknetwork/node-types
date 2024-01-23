@@ -11,6 +11,7 @@ const types = {
   BlockLength: {
     max: 'PerDispatchClassU32',
   },
+  DispatchError: "DispatchErrorPre6",
   Keys: 'SessionKeys4',
   Did: '[u8;32]',
   Bytes32: {
